@@ -8857,7 +8857,7 @@
 				)
 			)
 		)
-		(property "Value" "Led_0603_amber_generic"
+		(property "Value" "amber"
 			(at -1.27 2.54 0)
 			(effects
 				(font
@@ -10045,7 +10045,7 @@
 				)
 			)
 		)
-		(property "Value" "Led_0603_brightgreen_generic"
+		(property "Value" "brightgreen"
 			(at -1.27 2.54 0)
 			(effects
 				(font

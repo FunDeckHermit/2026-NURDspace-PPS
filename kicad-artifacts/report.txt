@@ -1,9 +1,9 @@
 KiCad Export Report
 ===================
 
-Project: NURD-template
-Run at: 2026-01-05 21:01:31
-Duration: 15s
+Project: 2026-NURDspace-PPS
+Run at: 2026-02-28 18:57:35
+Duration: 16s
 
 Render settings:
   Quality: high
@@ -23,13 +23,13 @@ Placement:
   Side: both
 
 Generated files:
+2026-NURDspace-PPS_board.step
+2026-NURDspace-PPS_bom.csv
+2026-NURDspace-PPS_gerbers.zip
+2026-NURDspace-PPS_pcb.pdf
+2026-NURDspace-PPS_placement.csv
+2026-NURDspace-PPS_render-bottom.png
+2026-NURDspace-PPS_render-iso.png
+2026-NURDspace-PPS_render-top.png
+2026-NURDspace-PPS_schematic.pdf
 drill
-NURD-template_board.step
-NURD-template_bom.csv
-NURD-template_gerbers.zip
-NURD-template_pcb.pdf
-NURD-template_placement.csv
-NURD-template_render-bottom.png
-NURD-template_render-iso.png
-NURD-template_render-top.png
-NURD-template_schematic.pdf
