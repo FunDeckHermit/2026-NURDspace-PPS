@@ -1,4 +1,4 @@
-379266946269226
+382811791817457
 0_NRD_footprints
 1x2 RJ12_WURTH_615012143921
 RJ25 6P6C Socket 90 degrees, https://wayconn.com/wp-content/themes/way/datasheet/MJEA-660X1XXX_RJ25_6P6C_PCB_RA.pdf
@@ -13,6 +13,13 @@ RJ12 RJ18 RJ25 jack connector 6P6C
 0
 10
 10
+0_NRD_footprints
+481RV12172100
+WS-RPTL THT Illuminated Rotary Push Button Switch
+
+0
+18
+17
 0_NRD_footprints
 480995701
 
@@ -31,6 +38,13 @@ AMT0660007DB0000G
 CP_Elec_6.3x7.7_smaller
 SMD capacitor, aluminum electrolytic, Nichicon, 6.3x7.7mm
 capacitor electrolytic
+0
+2
+2
+0_NRD_footprints
+CP_Wurth_WCAP-PHLE-L7.3W4.3H1.9
+Aluminum Polymer Capacitors Low ESR, body 7.3x4.3x1.9mm, https://www.we-online.com/en/components/products/WCAP-PHLE#/articles/WCAP-PHLE
+SMT
 0
 2
 2
