@@ -334,7 +334,7 @@
 					)
 				)
 			)
-			(pin input line
+			(pin no_connect line
 				(at -17.78 -11.43 0)
 				(length 2.54)
 				(hide yes)
@@ -353,7 +353,7 @@
 					)
 				)
 			)
-			(pin input line
+			(pin no_connect line
 				(at -17.78 -11.43 0)
 				(length 2.54)
 				(hide yes)
@@ -372,7 +372,7 @@
 					)
 				)
 			)
-			(pin input line
+			(pin no_connect line
 				(at -17.78 -11.43 0)
 				(length 2.54)
 				(hide yes)
@@ -391,7 +391,7 @@
 					)
 				)
 			)
-			(pin input line
+			(pin no_connect line
 				(at -17.78 -11.43 0)
 				(length 2.54)
 				(hide yes)
@@ -410,7 +410,7 @@
 					)
 				)
 			)
-			(pin input line
+			(pin no_connect line
 				(at -17.78 -11.43 0)
 				(length 2.54)
 				(hide yes)
@@ -429,7 +429,7 @@
 					)
 				)
 			)
-			(pin input line
+			(pin no_connect line
 				(at -17.78 -11.43 0)
 				(length 2.54)
 				(hide yes)

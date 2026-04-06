@@ -1,4 +1,4 @@
-382811791817457
+386356747022098
 0_NRD_footprints
 1x2 RJ12_WURTH_615012143921
 RJ25 6P6C Socket 90 degrees, https://wayconn.com/wp-content/themes/way/datasheet/MJEA-660X1XXX_RJ25_6P6C_PCB_RA.pdf
@@ -517,6 +517,13 @@ LED_LXMLPX020000
 0
 3
 3
+0_NRD_footprints
+LED_Luxeon3535_3.5x3.7mm
+3.5mm x 2.8mm mid-power LED, https://www.lcsc.com/datasheet/lcsc_datasheet_2307180955_Foshan-NationStar-Optoelectronics-NTD3528U1_C7464740.pdf
+Nationstar
+0
+2
+2
 0_NRD_footprints
 LED_SK6812_explicit
 5.0mm x 5.0mm Addressable RGB LED NeoPixel, https://cdn-shop.adafruit.com/product-files/1138/SK6812+LED+datasheet+.pdf
@@ -1161,6 +1168,13 @@ tactile switch kmr2
 0
 4
 2
+0_NRD_footprints
+SW_Push_430483025816
+Tactile switch, 6.2x6.25 mm, H7.68 mm, J leads, https://www.ckswitches.com/media/1972/ksc6.pdf
+CK C&K SPST
+0
+4
+4
 0_NRD_footprints
 Spacer_Wurth_9774005243R
 
