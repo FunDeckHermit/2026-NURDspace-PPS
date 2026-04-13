@@ -2,7 +2,7 @@ KiCad Export Report
 ===================
 
 Project: 2026-NURDspace-PPS
-Run at: 2026-04-13 21:21:14
+Run at: 2026-04-13 21:36:12
 Duration: 28s
 KiCad Type: Flatpak
 

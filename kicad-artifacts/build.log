@@ -1,9 +1,9 @@
 Detected gerber layers: F.Cu,In1.Cu,In2.Cu,B.Cu,F.Mask,B.Mask,F.Paste,B.Paste,F.SilkS,B.SilkS,Edge.Cuts
 → Exporting schematic PDF
-Plotted to 'kicad-artifacts/2026-NURDspace-PPS_schematic.pdf'.
+Plotted to '.kicad-build-temp/2026-NURDspace-PPS_schematic.pdf'.
 Done.
 → Exporting PCB PDF
-Plotted to 'kicad-artifacts/pcb-multipage/2026-NURDspace-PPS.pdf'.
+Plotted to '.kicad-build-temp/pcb-multipage/2026-NURDspace-PPS.pdf'.
 Done.
 → Exporting top render
 Loading…
@@ -76,24 +76,23 @@ Build BVH for holes and vias
 Load Raytracing: board
 Load Raytracing: layers
 Loading 3D models...
-Reload time 0.377 s
+Reload time 0.365 s
 Rendering: 7 %
-Rendering: 12 %
-Rendering: 18 %
-Rendering: 23 %
-Rendering: 32 %
-Rendering: 39 %
-Rendering: 46 %
-Rendering: 51 %
-Rendering: 58 %
-Rendering: 66 %
-Rendering: 77 %
-Rendering: 84 %
-Rendering: 91 %
-Rendering: 97 %
+Rendering: 13 %
+Rendering: 19 %
+Rendering: 25 %
+Rendering: 34 %
+Rendering: 42 %
+Rendering: 47 %
+Rendering: 53 %
+Rendering: 60 %
+Rendering: 71 %
+Rendering: 80 %
+Rendering: 87 %
+Rendering: 93 %
 Rendering: 100 %
 Rendering: Post processing shader
-Rendering time 6.044 s
+Rendering time 5.894 s
 Successfully created 3D render image
 → Exporting bottom render
 Loading…
@@ -166,23 +165,22 @@ Build BVH for holes and vias
 Load Raytracing: board
 Load Raytracing: layers
 Loading 3D models...
-Reload time 0.397 s
+Reload time 0.375 s
 Rendering: 8 %
 Rendering: 16 %
 Rendering: 23 %
 Rendering: 30 %
 Rendering: 36 %
 Rendering: 43 %
-Rendering: 50 %
+Rendering: 51 %
 Rendering: 59 %
 Rendering: 69 %
 Rendering: 77 %
 Rendering: 85 %
-Rendering: 92 %
-Rendering: 100 %
+Rendering: 93 %
 Rendering: 100 %
 Rendering: Post processing shader
-Rendering time 5.491 s
+Rendering time 5.449 s
 Successfully created 3D render image
 → Exporting isometric render
 Loading…
@@ -255,28 +253,28 @@ Build BVH for holes and vias
 Load Raytracing: board
 Load Raytracing: layers
 Loading 3D models...
-Reload time 0.384 s
+Reload time 0.362 s
 Rendering: 6 %
 Rendering: 11 %
-Rendering: 15 %
+Rendering: 16 %
 Rendering: 20 %
 Rendering: 26 %
 Rendering: 33 %
-Rendering: 41 %
+Rendering: 43 %
 Rendering: 50 %
-Rendering: 60 %
-Rendering: 71 %
-Rendering: 82 %
-Rendering: 88 %
-Rendering: 93 %
-Rendering: 98 %
+Rendering: 61 %
+Rendering: 72 %
+Rendering: 83 %
+Rendering: 89 %
+Rendering: 94 %
+Rendering: 100 %
 Rendering: 100 %
 Rendering: Post processing shader
-Rendering time 6.006 s
+Rendering time 5.915 s
 Successfully created 3D render image
 → Exporting drill files
-Created file 'kicad-artifacts/drill/2026-NURDspace-PPS.drl'
-Created file 'kicad-artifacts/drill/2026-NURDspace-PPS-drl_map.pdf'.
+Created file '.kicad-build-temp/drill/2026-NURDspace-PPS.drl'
+Created file '.kicad-build-temp/drill/2026-NURDspace-PPS-drl_map.pdf'.
 Done.
 → Exporting STEP model
 Determining PCB data.
@@ -435,68 +433,69 @@ Writing STEP file.
 ******        Transferring Shape, ShapeType = 0                      ******
 ** WorkSession : Sending all data
  Step File Name : $tempfile$.step(191231 ents)  Write  Done
-STEP file 'kicad-artifacts/2026-NURDspace-PPS_board.step' created.
+STEP file '.kicad-build-temp/2026-NURDspace-PPS_board.step' created.
 
-Export time 2.897 s
+Export time 2.705 s
 → Exporting placement CSV
-Wrote position data to 'kicad-artifacts/2026-NURDspace-PPS_placement.csv'.
+Wrote position data to '.kicad-build-temp/2026-NURDspace-PPS_placement.csv'.
 → Exporting BOM CSV
-Wrote bill of materials to 'kicad-artifacts/2026-NURDspace-PPS_bom.csv'.
+Wrote bill of materials to '.kicad-build-temp/2026-NURDspace-PPS_bom.csv'.
 → Generating Interactive HTML BOM
 → Running InteractiveHtmlBom generate_interactive_bom...
-21:21:40: Debug: Adding duplicate image handler for 'PNG file'
-21:21:40: Debug: Adding duplicate image handler for 'PNG file'
-21:21:40: Debug: Adding duplicate image handler for 'JPEG file'
-21:21:40: Debug: Adding duplicate image handler for 'TIFF file'
-21:21:40: Debug: Adding duplicate image handler for 'GIF file'
-21:21:40: Debug: Adding duplicate image handler for 'PNM file'
-21:21:40: Debug: Adding duplicate image handler for 'PCX file'
-21:21:40: Debug: Adding duplicate image handler for 'IFF file'
-21:21:40: Debug: Adding duplicate image handler for 'Windows icon file'
-21:21:40: Debug: Adding duplicate image handler for 'Windows cursor file'
-21:21:40: Debug: Adding duplicate image handler for 'Windows animated cursor file'
-21:21:40: Debug: Adding duplicate image handler for 'TGA file'
-21:21:40: Debug: Adding duplicate image handler for 'XPM file'
-21:21:40: Debug: Adding duplicate image handler for 'JPEG file'
-21:21:40: Debug: Adding duplicate image handler for 'TIFF file'
-21:21:40: Debug: Adding duplicate image handler for 'GIF file'
-21:21:40: Debug: Adding duplicate image handler for 'PNM file'
-21:21:40: Debug: Adding duplicate image handler for 'PCX file'
-21:21:40: Debug: Adding duplicate image handler for 'IFF file'
-21:21:40: Debug: Adding duplicate image handler for 'Windows icon file'
-21:21:40: Debug: Adding duplicate image handler for 'Windows cursor file'
-21:21:40: Debug: Adding duplicate image handler for 'Windows animated cursor file'
-21:21:40: Debug: Adding duplicate image handler for 'TGA file'
-21:21:40: Debug: Adding duplicate image handler for 'XPM file'
+21:36:38: Debug: Adding duplicate image handler for 'PNG file'
+21:36:38: Debug: Adding duplicate image handler for 'JPEG file'
+21:36:38: Debug: Adding duplicate image handler for 'TIFF file'
+21:36:38: Debug: Adding duplicate image handler for 'GIF file'
+21:36:38: Debug: Adding duplicate image handler for 'PNM file'
+21:36:38: Debug: Adding duplicate image handler for 'PCX file'
+21:36:38: Debug: Adding duplicate image handler for 'IFF file'
+21:36:38: Debug: Adding duplicate image handler for 'Windows icon file'
+21:36:38: Debug: Adding duplicate image handler for 'Windows cursor file'
+21:36:38: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+21:36:38: Debug: Adding duplicate image handler for 'TGA file'
+21:36:38: Debug: Adding duplicate image handler for 'XPM file'
+21:36:38: Debug: Adding duplicate image handler for 'PNG file'
+21:36:38: Debug: Adding duplicate image handler for 'JPEG file'
+21:36:38: Debug: Adding duplicate image handler for 'TIFF file'
+21:36:38: Debug: Adding duplicate image handler for 'GIF file'
+21:36:38: Debug: Adding duplicate image handler for 'PNM file'
+21:36:38: Debug: Adding duplicate image handler for 'PCX file'
+21:36:38: Debug: Adding duplicate image handler for 'IFF file'
+21:36:38: Debug: Adding duplicate image handler for 'Windows icon file'
+21:36:38: Debug: Adding duplicate image handler for 'Windows cursor file'
+21:36:38: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+21:36:38: Debug: Adding duplicate image handler for 'TGA file'
+21:36:38: Debug: Adding duplicate image handler for 'XPM file'
 Loading ./2026-NURDspace-PPS.kicad_pcb
-2026-04-13 21:21:40,884 WARNING Assuming extra data file to be the pcb file since --extra-data-file was not specified.
+2026-04-13 21:36:38,707 WARNING Assuming extra data file to be the pcb file since --extra-data-file was not specified.
 Loading ./2026-NURDspace-PPS.kicad_pcb
-2026-04-13 21:21:40,884 WARNING Assuming extra data file to be the pcb file since --extra-data-file was not specified.
-2026-04-13 21:21:41,113 INFO Compressing pcb data
-2026-04-13 21:21:41,113 INFO Compressing pcb data
-2026-04-13 21:21:41,688 INFO Dumping pcb data
-2026-04-13 21:21:41,688 INFO Dumping pcb data
-2026-04-13 21:21:41,690 INFO Created file /home/roy/Documents/_Obsessies/2026-NURDspace-PPS/kicad-artifacts/ibom.html
-2026-04-13 21:21:41,690 INFO Created file /home/roy/Documents/_Obsessies/2026-NURDspace-PPS/kicad-artifacts/ibom.html
+2026-04-13 21:36:38,707 WARNING Assuming extra data file to be the pcb file since --extra-data-file was not specified.
+2026-04-13 21:36:38,927 INFO Compressing pcb data
+2026-04-13 21:36:38,927 INFO Compressing pcb data
+2026-04-13 21:36:39,447 INFO Dumping pcb data
+2026-04-13 21:36:39,447 INFO Dumping pcb data
+2026-04-13 21:36:39,449 INFO Created file /home/roy/Documents/_Obsessies/2026-NURDspace-PPS/.kicad-build-temp/ibom.html
+2026-04-13 21:36:39,449 INFO Created file /home/roy/Documents/_Obsessies/2026-NURDspace-PPS/.kicad-build-temp/ibom.html
 ✓ Interactive BOM generated successfully
 → Exporting Gerbers
-Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-F_Cu.gtl'.
-Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-In1_Cu.g1'.
-Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-In2_Cu.g2'.
-Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-B_Cu.gbl'.
-Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-F_Paste.gtp'.
-Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-B_Paste.gbp'.
-Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-F_Silkscreen.gto'.
-Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-B_Silkscreen.gbo'.
-Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-F_Mask.gts'.
-Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-B_Mask.gbs'.
-Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-Edge_Cuts.gm1'.
+Plotted to '.kicad-build-temp/gerbers/2026-NURDspace-PPS-F_Cu.gtl'.
+Plotted to '.kicad-build-temp/gerbers/2026-NURDspace-PPS-In1_Cu.g1'.
+Plotted to '.kicad-build-temp/gerbers/2026-NURDspace-PPS-In2_Cu.g2'.
+Plotted to '.kicad-build-temp/gerbers/2026-NURDspace-PPS-B_Cu.gbl'.
+Plotted to '.kicad-build-temp/gerbers/2026-NURDspace-PPS-F_Paste.gtp'.
+Plotted to '.kicad-build-temp/gerbers/2026-NURDspace-PPS-B_Paste.gbp'.
+Plotted to '.kicad-build-temp/gerbers/2026-NURDspace-PPS-F_Silkscreen.gto'.
+Plotted to '.kicad-build-temp/gerbers/2026-NURDspace-PPS-B_Silkscreen.gbo'.
+Plotted to '.kicad-build-temp/gerbers/2026-NURDspace-PPS-F_Mask.gts'.
+Plotted to '.kicad-build-temp/gerbers/2026-NURDspace-PPS-B_Mask.gbs'.
+Plotted to '.kicad-build-temp/gerbers/2026-NURDspace-PPS-Edge_Cuts.gm1'.
 → Exporting Drill Files (JLCPCB-compatible Excellon)
-Created file 'kicad-artifacts/gerbers/2026-NURDspace-PPS.drl'
+Created file '.kicad-build-temp/gerbers/2026-NURDspace-PPS.drl'
 Done.
 → Removing Gerber Job file (if present)
 → Zipping Gerbers and Drill Files
 → Writing report.txt
+→ Moving files to final output directory
 
 ✓ All artifacts generated in: kicad-artifacts
 ✓ Build log: kicad-artifacts/build.log

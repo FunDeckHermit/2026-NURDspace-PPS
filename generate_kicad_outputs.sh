@@ -6,7 +6,17 @@ RUN_DATETIME="$(date +"%Y-%m-%d %H:%M:%S")"
 
 OUTPUT_DIR="${1:-kicad-artifacts}"
 
-echo "Output directory: ${OUTPUT_DIR}"
+# Use current directory for temp files when using Flatpak (Flatpak sandboxing issue)
+if command -v flatpak >/dev/null 2>&1 && flatpak info org.kicad.KiCad >/dev/null 2>&1; then
+    TEMP_DIR=".kicad-build-temp"
+    USE_FLATPAK=true
+else
+    TEMP_DIR=$(mktemp -d)
+    USE_FLATPAK=false
+fi
+
+echo "Output directory: $OUTPUT_DIR"
+echo "Temporary directory: $TEMP_DIR"
 
 ###############################################################################
 # Check dependencies upfront
@@ -62,8 +72,8 @@ cleanup_on_error() {
     local exit_code=$?
     if [[ $exit_code -ne 0 ]]; then
         echo "ERROR: Script failed with exit code $exit_code"
-        echo "Cleaning up incomplete output directory: $OUTPUT_DIR"
-        rm -rf "$OUTPUT_DIR"
+        echo "Cleaning up temporary directory: $TEMP_DIR"
+        rm -rf "$TEMP_DIR"
     fi
     exit $exit_code
 }
@@ -79,14 +89,11 @@ if [[ -d "$OUTPUT_DIR" ]]; then
     rm -rf "$OUTPUT_DIR"
 fi
 
-mkdir -p "$OUTPUT_DIR"
-
 ###############################################################################
 # Detect KiCad CLI (native first, then Flatpak)
 ###############################################################################
 
 KICAD_CLI=""
-USE_FLATPAK=false
 
 if command -v kicad-cli >/dev/null 2>&1; then
     echo "Found native KiCad installation."
@@ -136,20 +143,59 @@ echo "Schematic:    $SCHEMATIC"
 echo "PCB:          $PCB"
 
 ###############################################################################
-# Prepare folders
+# Prepare temporary folders
 ###############################################################################
 
-mkdir -p "$OUTPUT_DIR/drill"
-mkdir -p "$OUTPUT_DIR/gerbers"
-MP_DIR="$OUTPUT_DIR/pcb-multipage"
+mkdir -p "$TEMP_DIR/drill"
+mkdir -p "$TEMP_DIR/gerbers"
+MP_DIR="$TEMP_DIR/pcb-multipage"
 mkdir -p "$MP_DIR"
 
-REPORT_FILE="$OUTPUT_DIR/report.txt"
-LOG_FILE="$OUTPUT_DIR/build.log"
+REPORT_FILE="$TEMP_DIR/report.txt"
+LOG_FILE="$TEMP_DIR/build.log"
 
 # Start logging
 exec > >(tee -a "$LOG_FILE")
 exec 2>&1
+
+###############################################################################
+# Helper function to wait for file creation
+###############################################################################
+
+wait_for_file() {
+    local file="$1"
+    local timeout="${2:-15}"
+    local elapsed=0
+    local is_file="${3:-true}"  # true for file, false for directory
+    
+    if [[ "$is_file" == "true" ]]; then
+        while [[ ! -f "$file" ]] && [[ $elapsed -lt $timeout ]]; do
+            sleep 0.2
+            elapsed=$((elapsed + 1))
+        done
+        
+        if [[ ! -f "$file" ]]; then
+            echo "ERROR: File not created after ${timeout}s: $file"
+            ls -la "$(dirname "$file")" 2>/dev/null || echo "Directory does not exist: $(dirname "$file")"
+            return 1
+        fi
+    else
+        # For directories, wait for them to have files
+        while [[ ! -d "$file" ]] || [[ -z "$(find "$file" -maxdepth 1 -type f 2>/dev/null)" ]]; do
+            if [[ $elapsed -ge $timeout ]]; then
+                break
+            fi
+            sleep 0.2
+            elapsed=$((elapsed + 1))
+        done
+        
+        if [[ ! -d "$file" ]] || [[ -z "$(find "$file" -maxdepth 1 -type f 2>/dev/null)" ]]; then
+            echo "ERROR: No files created in directory after ${timeout}s: $file"
+            ls -la "$file" 2>/dev/null || echo "Directory does not exist: $file"
+            return 1
+        fi
+    fi
+}
 
 ###############################################################################
 # Detect PCB layers from KiCad PCB file
@@ -181,11 +227,18 @@ echo "Detected gerber layers: $GERBER_LAYERS"
 
 run_kicad_cmd() {
     local description="$1"
-    shift
+    local output_file="$2"
+    local is_file="${3:-true}"  # true for file, false for directory
+    shift 3
     
     echo "→ $description"
     if ! "$@"; then
         echo "ERROR: $description failed!"
+        return 1
+    fi
+    
+    # Wait for file/directory to be created
+    if ! wait_for_file "$output_file" 15 "$is_file"; then
         return 1
     fi
 }
@@ -195,19 +248,18 @@ run_kicad_cmd() {
 ###############################################################################
 
 run_kicad_cmd "Exporting schematic PDF" \
+    "$TEMP_DIR/${PROJECT_NAME}_schematic.pdf" \
+    "true" \
     $KICAD_CLI sch export pdf "$SCHEMATIC" \
-    --output "$OUTPUT_DIR/${PROJECT_NAME}_schematic.pdf"
-
-[[ -f "$OUTPUT_DIR/${PROJECT_NAME}_schematic.pdf" ]] || {
-    echo "ERROR: Schematic PDF was not created!"
-    exit 1
-}
+    --output "$TEMP_DIR/${PROJECT_NAME}_schematic.pdf"
 
 ###############################################################################
 # PCB PDF (multipage workaround)
 ###############################################################################
 
 run_kicad_cmd "Exporting PCB PDF" \
+    "$MP_DIR" \
+    "false" \
     $KICAD_CLI pcb export pdf "$PCB" \
     --layers F.Cu,In1.Cu,In2.Cu,B.Cu \
     --mode-multipage \
@@ -216,16 +268,12 @@ run_kicad_cmd "Exporting PCB PDF" \
 INNER_PDF=$(find "$MP_DIR" -maxdepth 1 -type f -name '*.pdf' | head -n 1 || true)
 if [[ -z "$INNER_PDF" ]]; then
     echo "ERROR: PCB PDF not generated!"
+    ls -la "$MP_DIR" 2>/dev/null || echo "Directory does not exist"
     exit 1
 fi
 
-mv "$INNER_PDF" "$OUTPUT_DIR/${PROJECT_NAME}_pcb.pdf"
+mv "$INNER_PDF" "$TEMP_DIR/${PROJECT_NAME}_pcb.pdf"
 rm -rf "$MP_DIR"
-
-[[ -f "$OUTPUT_DIR/${PROJECT_NAME}_pcb.pdf" ]] || {
-    echo "ERROR: PCB PDF move failed!"
-    exit 1
-}
 
 ###############################################################################
 # High-quality renders
@@ -236,30 +284,24 @@ RENDER_HEIGHT=1400
 RENDER_QUALITY="high"
 
 run_kicad_cmd "Exporting top render" \
+    "$TEMP_DIR/${PROJECT_NAME}_render-top.png" \
+    "true" \
     $KICAD_CLI pcb render "$PCB" \
     --side top \
     --quality "$RENDER_QUALITY" \
     --width "$RENDER_WIDTH" \
     --height "$RENDER_HEIGHT" \
-    --output "$OUTPUT_DIR/${PROJECT_NAME}_render-top.png"
-
-[[ -f "$OUTPUT_DIR/${PROJECT_NAME}_render-top.png" ]] || {
-    echo "ERROR: Top render was not created!"
-    exit 1
-}
+    --output "$TEMP_DIR/${PROJECT_NAME}_render-top.png"
 
 run_kicad_cmd "Exporting bottom render" \
+    "$TEMP_DIR/${PROJECT_NAME}_render-bottom.png" \
+    "true" \
     $KICAD_CLI pcb render "$PCB" \
     --side bottom \
     --quality "$RENDER_QUALITY" \
     --width "$RENDER_WIDTH" \
     --height "$RENDER_HEIGHT" \
-    --output "$OUTPUT_DIR/${PROJECT_NAME}_render-bottom.png"
-
-[[ -f "$OUTPUT_DIR/${PROJECT_NAME}_render-bottom.png" ]] || {
-    echo "ERROR: Bottom render was not created!"
-    exit 1
-}
+    --output "$TEMP_DIR/${PROJECT_NAME}_render-bottom.png"
 
 ###############################################################################
 # Isometric render
@@ -268,92 +310,77 @@ run_kicad_cmd "Exporting bottom render" \
 ISO_ROTATION="315,0,45"
 
 run_kicad_cmd "Exporting isometric render" \
+    "$TEMP_DIR/${PROJECT_NAME}_render-iso.png" \
+    "true" \
     $KICAD_CLI pcb render "$PCB" \
     --side top \
     --quality "$RENDER_QUALITY" \
     --width "$RENDER_WIDTH" \
     --height "$RENDER_HEIGHT" \
     --rotate "$ISO_ROTATION" \
-    --output "$OUTPUT_DIR/${PROJECT_NAME}_render-iso.png"
-
-[[ -f "$OUTPUT_DIR/${PROJECT_NAME}_render-iso.png" ]] || {
-    echo "ERROR: Isometric render was not created!"
-    exit 1
-}
+    --output "$TEMP_DIR/${PROJECT_NAME}_render-iso.png"
 
 ###############################################################################
 # Drill + map
 ###############################################################################
 
 run_kicad_cmd "Exporting drill files" \
+    "$TEMP_DIR/drill" \
+    "false" \
     $KICAD_CLI pcb export drill "$PCB" \
-    --output "$OUTPUT_DIR/drill" \
+    --output "$TEMP_DIR/drill" \
     --format excellon \
     --drill-origin absolute \
     --generate-map \
     --map-format pdf
 
-if compgen -G "$OUTPUT_DIR/drill/*.pdf" > /dev/null; then
-    MAPPDF=$(ls "$OUTPUT_DIR/drill/"*.pdf | head -n 1)
-    mv "$MAPPDF" "$OUTPUT_DIR/drill/${PROJECT_NAME}_drill-map.pdf"
+if compgen -G "$TEMP_DIR/drill/*.pdf" > /dev/null; then
+    MAPPDF=$(ls "$TEMP_DIR/drill/"*.pdf | head -n 1)
+    [[ "$MAPPDF" != *"drill-map.pdf" ]] && mv "$MAPPDF" "$TEMP_DIR/drill/${PROJECT_NAME}_drill-map.pdf"
 fi
-
-[[ -f "$OUTPUT_DIR/drill/${PROJECT_NAME}_drill-map.pdf" ]] || {
-    echo "ERROR: Drill map PDF was not created!"
-    exit 1
-}
 
 ###############################################################################
 # STEP model
 ###############################################################################
 
 run_kicad_cmd "Exporting STEP model" \
+    "$TEMP_DIR/${PROJECT_NAME}_board.step" \
+    "true" \
     $KICAD_CLI pcb export step "$PCB" \
-    --output "$OUTPUT_DIR/${PROJECT_NAME}_board.step" \
+    --output "$TEMP_DIR/${PROJECT_NAME}_board.step" \
     --force
-
-[[ -f "$OUTPUT_DIR/${PROJECT_NAME}_board.step" ]] || {
-    echo "ERROR: STEP model was not created!"
-    exit 1
-}
 
 ###############################################################################
 # XY placement
 ###############################################################################
 
 run_kicad_cmd "Exporting placement CSV" \
+    "$TEMP_DIR/${PROJECT_NAME}_placement.csv" \
+    "true" \
     $KICAD_CLI pcb export pos "$PCB" \
-    --output "$OUTPUT_DIR/${PROJECT_NAME}_placement.csv" \
+    --output "$TEMP_DIR/${PROJECT_NAME}_placement.csv" \
     --side both \
     --format csv \
     --units mm \
     --use-drill-file-origin \
     --exclude-dnp
 
-sed -i '1s/Ref,Val,Package,PosX,PosY,Rot,Side/Designator,Val,Package,"Mid X","Mid Y",Rotation,Layer/' "$OUTPUT_DIR/${PROJECT_NAME}_placement.csv"
-
-[[ -f "$OUTPUT_DIR/${PROJECT_NAME}_placement.csv" ]] || {
-    echo "ERROR: Placement CSV was not created!"
-    exit 1
-}
+sed -i '1s/Ref,Val,Package,PosX,PosY,Rot,Side/Designator,Val,Package,"Mid X","Mid Y",Rotation,Layer/' "$TEMP_DIR/${PROJECT_NAME}_placement.csv"
 
 ###############################################################################
 # BOM (KiCad CLI)
 ###############################################################################
 
 run_kicad_cmd "Exporting BOM CSV" \
+    "$TEMP_DIR/${PROJECT_NAME}_bom.csv" \
+    "true" \
     $KICAD_CLI sch export bom "$SCHEMATIC" \
     --fields 'Reference,Value,MPN,Footprint,${QUANTITY}' \
     --labels 'Designator, Comment, MPN, Footprint, Quantity' \
     --exclude-dnp \
     --group-by "Value" \
     --ref-range-delimiter "" \
-    --output "$OUTPUT_DIR/${PROJECT_NAME}_bom.csv"
-
-[[ -f "$OUTPUT_DIR/${PROJECT_NAME}_bom.csv" ]] || {
-    echo "ERROR: BOM CSV was not created!"
-    exit 1
-}
+    --output "$TEMP_DIR/${PROJECT_NAME}_bom.csv"
 
 # Fix oversized Designator fields (>2048 chars) for JLCPCB/PCBWay compatibility
 gawk -i inplace -F',' 'NR==1 {print; next}
@@ -381,7 +408,7 @@ gawk -i inplace -F',' 'NR==1 {print; next}
   } else {
     print  # Fallback for malformed lines
   }
-}' "$OUTPUT_DIR/${PROJECT_NAME}_bom.csv"
+}' "$TEMP_DIR/${PROJECT_NAME}_bom.csv"
 
 ###############################################################################
 # Interactive HTML BOM with command-line flags
@@ -412,7 +439,7 @@ else
     
     if INTERACTIVE_HTML_BOM_CLI_MODE=1 INTERACTIVE_HTML_BOM_NO_DISPLAY=1 \
         $KICAD_PYTHON -m InteractiveHtmlBom.generate_interactive_bom \
-        --dest-dir "$OUTPUT_DIR" \
+        --dest-dir "$TEMP_DIR" \
         --no-browser \
         --show-fields "Value,Footprint,MF,MPN" \
         --group-fields "Value,Footprint" \
@@ -425,7 +452,7 @@ else
         --include-tracks \
         "$PCB" 2>&1 | tee -a "$LOG_FILE"; then
         # Check if HTML was generated
-        if find "$OUTPUT_DIR" -maxdepth 1 -name "*.html" | grep -q .; then
+        if find "$TEMP_DIR" -maxdepth 1 -name "*.html" | grep -q .; then
             echo "✓ Interactive BOM generated successfully"
         else
             echo "⚠ Interactive BOM: No HTML files generated"
@@ -440,13 +467,17 @@ fi
 ###############################################################################
 
 run_kicad_cmd "Exporting Gerbers" \
+    "$TEMP_DIR/gerbers" \
+    "false" \
     $KICAD_CLI pcb export gerbers "$PCB" \
-    --output "$OUTPUT_DIR/gerbers" \
+    --output "$TEMP_DIR/gerbers" \
     --layers "$GERBER_LAYERS"
 
 run_kicad_cmd "Exporting Drill Files (JLCPCB-compatible Excellon)" \
+    "$TEMP_DIR/gerbers" \
+    "false" \
     $KICAD_CLI pcb export drill "$PCB" \
-    --output "$OUTPUT_DIR/gerbers" \
+    --output "$TEMP_DIR/gerbers" \
     --format excellon \
     --drill-origin absolute \
     --excellon-zeros-format decimal \
@@ -454,19 +485,14 @@ run_kicad_cmd "Exporting Drill Files (JLCPCB-compatible Excellon)" \
     --excellon-oval-format route
 
 echo "→ Removing Gerber Job file (if present)"
-rm -f "$OUTPUT_DIR/gerbers/"*.gbrjob
+rm -f "$TEMP_DIR/gerbers/"*.gbrjob
 
 echo "→ Zipping Gerbers and Drill Files"
 (
-    cd "$OUTPUT_DIR/gerbers"
+    cd "$TEMP_DIR/gerbers"
     zip -r "../${PROJECT_NAME}_gerbers.zip" . > /dev/null 2>&1
 )
-rm -rf "$OUTPUT_DIR/gerbers"
-
-[[ -f "$OUTPUT_DIR/${PROJECT_NAME}_gerbers.zip" ]] || {
-    echo "ERROR: Gerbers ZIP was not created!"
-    exit 1
-}
+rm -rf "$TEMP_DIR/gerbers"
 
 ###############################################################################
 # Report.txt
@@ -511,8 +537,17 @@ Interactive BOM:
   Layer view: Front
 
 Generated files:
-$(ls -1 "$OUTPUT_DIR")
+$(ls -1 "$TEMP_DIR")
 EOF
+
+###############################################################################
+# Move all files from temp to final output directory
+###############################################################################
+
+echo "→ Moving files to final output directory"
+mkdir -p "$OUTPUT_DIR"
+mv "$TEMP_DIR"/* "$OUTPUT_DIR/" 2>/dev/null || true
+rmdir "$TEMP_DIR" 2>/dev/null || true
 
 ###############################################################################
 # Done
@@ -520,5 +555,5 @@ EOF
 
 echo ""
 echo "✓ All artifacts generated in: $OUTPUT_DIR"
-echo "✓ Build log: $LOG_FILE"
+echo "✓ Build log: $OUTPUT_DIR/build.log"
 ls -R "$OUTPUT_DIR"
