@@ -13,8 +13,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U5"
-				(at 2.1941 19.05 0)
+			(property "Reference" "U102"
+				(at 3.81 17.526 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -23,7 +23,7 @@
 				)
 			)
 			(property "Value" "AP33772S"
-				(at 2.1941 16.51 0)
+				(at 3.81 14.986 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -300,25 +300,6 @@
 						)
 					)
 				)
-				(pin no_connect line
-					(at -17.78 -11.43 0)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input line
 					(at -7.62 -15.24 90)
 					(length 2.54)
@@ -402,6 +383,24 @@
 						)
 					)
 					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 0 -15.24 90)
+					(length 2.54)
+					(name "GPIO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7826,6 +7825,10 @@
 		(uuid "20a9abf3-6698-4a13-90c4-778ec5211fd0")
 	)
 	(no_connect
+		(at 110.49 78.74)
+		(uuid "254cc3d6-0b1b-4f23-b3e9-6de70811516c")
+	)
+	(no_connect
 		(at 90.17 60.96)
 		(uuid "59d639e2-55ce-4bf1-bf69-bf3146d62da1")
 	)
@@ -7844,6 +7847,10 @@
 	(no_connect
 		(at 300.99 156.21)
 		(uuid "b6ab0c8b-29fb-4703-8c99-f9404f2409ae")
+	)
+	(no_connect
+		(at 100.33 78.74)
+		(uuid "d308e5f5-38a4-49a9-8caf-b9fde2f0f63c")
 	)
 	(no_connect
 		(at 300.99 146.05)
@@ -7902,16 +7909,6 @@
 			(type default)
 		)
 		(uuid "0957480e-464b-4b5e-ba32-e4d336936070")
-	)
-	(wire
-		(pts
-			(xy 307.34 143.51) (xy 307.34 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0ca21408-64c3-4c01-b9ad-ab2887b5a3da")
 	)
 	(wire
 		(pts
@@ -8405,6 +8402,16 @@
 	)
 	(wire
 		(pts
+			(xy 107.95 78.74) (xy 107.95 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ec82399-8ffc-404e-9bbf-eea71602ea85")
+	)
+	(wire
+		(pts
 			(xy 40.64 29.21) (xy 44.45 29.21)
 		)
 		(stroke
@@ -8805,6 +8812,16 @@
 	)
 	(wire
 		(pts
+			(xy 307.34 132.08) (xy 307.34 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e18f36c-27e7-4ccf-a536-f71472cdac6f")
+	)
+	(wire
+		(pts
 			(xy 140.97 36.83) (xy 147.32 36.83)
 		)
 		(stroke
@@ -9025,7 +9042,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 96.52) (xy 105.41 97.79)
+			(xy 97.79 99.06) (xy 97.79 100.33)
 		)
 		(stroke
 			(width 0)
@@ -9085,7 +9102,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 87.63) (xy 105.41 88.9)
+			(xy 97.79 90.17) (xy 97.79 91.44)
 		)
 		(stroke
 			(width 0)
@@ -9265,6 +9282,16 @@
 	)
 	(wire
 		(pts
+			(xy 107.95 99.06) (xy 107.95 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0b9bc9a-e6fa-4f81-9f16-436950c58da8")
+	)
+	(wire
+		(pts
 			(xy 215.9 60.96) (xy 215.9 62.23)
 		)
 		(stroke
@@ -9302,6 +9329,16 @@
 			(type default)
 		)
 		(uuid "a2cd7264-5b0b-42a9-903b-2d5ff6a6f175")
+	)
+	(wire
+		(pts
+			(xy 307.34 139.7) (xy 307.34 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2f682f3-bc97-4c1b-91bb-33a6af9d647e")
 	)
 	(wire
 		(pts
@@ -9635,6 +9672,16 @@
 	)
 	(wire
 		(pts
+			(xy 97.79 82.55) (xy 97.79 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf8a54ae-a85b-42f0-97ce-583c358bccca")
+	)
+	(wire
+		(pts
 			(xy 118.11 134.62) (xy 123.19 134.62)
 		)
 		(stroke
@@ -9695,6 +9742,16 @@
 	)
 	(wire
 		(pts
+			(xy 105.41 78.74) (xy 105.41 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6d49731-a9d9-40e3-a71e-175957cade0e")
+	)
+	(wire
+		(pts
 			(xy 283.21 62.23) (xy 284.48 62.23)
 		)
 		(stroke
@@ -9705,13 +9762,13 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 78.74) (xy 105.41 82.55)
+			(xy 105.41 82.55) (xy 97.79 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d9523aae-a90a-40fb-9f2b-7c306d901946")
+		(uuid "da1c1b14-96f6-4330-ab95-fc987303b861")
 	)
 	(wire
 		(pts
@@ -9992,6 +10049,16 @@
 			(type default)
 		)
 		(uuid "f85b5218-1343-4886-8234-3ab7c6e9642a")
+	)
+	(wire
+		(pts
+			(xy 107.95 90.17) (xy 107.95 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f90212b3-8886-428e-b974-f730f53cf237")
 	)
 	(wire
 		(pts
@@ -10771,7 +10838,8 @@
 	)
 	(symbol
 		(lib_id "0_NRD_Leds_and_Opto:LED_WRTH_150060AS75000")
-		(at 105.41 92.71 90)
+		(at 97.79 95.25 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10780,7 +10848,7 @@
 		(fields_autoplaced yes)
 		(uuid "0ad6bf29-5404-4cb0-8764-f423ad8effaa")
 		(property "Reference" "D101"
-			(at 109.22 93.0274 90)
+			(at 93.98 95.5674 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10789,7 +10857,7 @@
 			)
 		)
 		(property "Value" "amber"
-			(at 109.22 95.5674 90)
+			(at 93.98 98.1074 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10798,7 +10866,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 86.36 87.884 0)
+			(at 116.84 90.424 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10807,7 +10875,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060AS75000.pdf"
-			(at 86.36 92.71 0)
+			(at 116.84 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10816,7 +10884,7 @@
 			)
 		)
 		(property "Description" "605nm Amber 2.0V 0603"
-			(at 86.614 89.916 0)
+			(at 116.586 92.456 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10825,7 +10893,7 @@
 			)
 		)
 		(property "MF" "Wurth Elektronik"
-			(at 86.868 89.154 0)
+			(at 116.332 91.694 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10834,7 +10902,7 @@
 			)
 		)
 		(property "MPN" "150060AS75000"
-			(at 86.868 87.122 0)
+			(at 116.332 89.662 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10843,7 +10911,7 @@
 			)
 		)
 		(property "S1 Price @ 100" "0.115"
-			(at 86.868 84.836 0)
+			(at 116.332 87.376 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10852,7 +10920,7 @@
 			)
 		)
 		(property "S1 Part number" "710-150060AS75000"
-			(at 86.868 89.154 0)
+			(at 116.332 91.694 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10861,7 +10929,7 @@
 			)
 		)
 		(property "S1 Part link" "https://mou.sr/3Kztdzj"
-			(at 86.614 89.662 0)
+			(at 116.586 92.202 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10870,7 +10938,7 @@
 			)
 		)
 		(property "S1 Description" "Standaard Led's - SMD WL-SMCW Mono LED Waterclear 0603 Amber"
-			(at 87.122 88.392 0)
+			(at 116.078 90.932 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10879,7 +10947,7 @@
 			)
 		)
 		(property "Update date" "06-03-2023"
-			(at 86.614 89.408 0)
+			(at 116.586 91.948 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13014,7 +13082,8 @@
 	)
 	(symbol
 		(lib_id "0_NRD_Resistors:R_0805_5K1")
-		(at 105.41 85.09 0)
+		(at 97.79 87.63 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13023,7 +13092,7 @@
 		(fields_autoplaced yes)
 		(uuid "376c6219-e7ca-428b-8acc-8dc0e748e7ff")
 		(property "Reference" "R109"
-			(at 107.95 83.8199 0)
+			(at 95.25 86.3599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13032,7 +13101,7 @@
 			)
 		)
 		(property "Value" "5K1"
-			(at 107.95 86.3599 0)
+			(at 95.25 88.8999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13041,7 +13110,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 104.902 74.168 0)
+			(at 98.298 76.708 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13050,7 +13119,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
-			(at 104.902 74.168 0)
+			(at 98.298 76.708 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13059,7 +13128,7 @@
 			)
 		)
 		(property "Description" "Thick Film Resistors - SMD, 0.125W, 0805, 1%"
-			(at 105.41 85.09 0)
+			(at 97.79 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13068,7 +13137,7 @@
 			)
 		)
 		(property "S1 Price @ 100" "0.093"
-			(at 104.902 74.168 0)
+			(at 98.298 76.708 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13077,7 +13146,7 @@
 			)
 		)
 		(property "S1 Part number" "603-RC0805FR-075K1L"
-			(at 104.902 74.168 0)
+			(at 98.298 76.708 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13086,7 +13155,7 @@
 			)
 		)
 		(property "S1 Part link" "https://mou.sr/3sDwyHv"
-			(at 104.902 74.168 0)
+			(at 98.298 76.708 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13095,7 +13164,7 @@
 			)
 		)
 		(property "S1 Description" "Weerstanden met dikke folie - SMD 5.1 kOhms 125mW 0805 1%"
-			(at 104.902 74.168 0)
+			(at 98.298 76.708 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13104,7 +13173,7 @@
 			)
 		)
 		(property "MF" "YAGEO"
-			(at 104.902 74.168 0)
+			(at 98.298 76.708 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13113,7 +13182,7 @@
 			)
 		)
 		(property "MPN" "RC0805FR-075K1L"
-			(at 104.902 74.168 0)
+			(at 98.298 76.708 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13122,7 +13191,7 @@
 			)
 		)
 		(property "Update date" "17-11-2023"
-			(at 104.902 74.168 0)
+			(at 98.298 76.708 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13131,7 +13200,7 @@
 			)
 		)
 		(property "Makso alternative" "000394"
-			(at 105.41 74.676 0)
+			(at 97.79 77.216 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13366,8 +13435,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 105.41 97.79 0)
-		(mirror y)
+		(at 97.79 100.33 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13375,7 +13443,7 @@
 		(dnp no)
 		(uuid "3a57d8ce-1883-447f-811e-4e7dab796d08")
 		(property "Reference" "#PWR0113"
-			(at 105.41 104.14 0)
+			(at 97.79 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13384,7 +13452,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 103.378 101.6 0)
+			(at 99.822 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13393,7 +13461,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 105.41 97.79 0)
+			(at 97.79 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13402,7 +13470,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 105.41 97.79 0)
+			(at 97.79 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13411,7 +13479,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 105.41 97.79 0)
+			(at 97.79 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13708,6 +13776,140 @@
 		)
 	)
 	(symbol
+		(lib_id "0_NRD_Resistors:R_0805.ͺ_180R")
+		(at 307.34 137.16 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "428a75c6-08c2-43a4-8e97-c28b25f968f3")
+		(property "Reference" "R119"
+			(at 304.8 135.8899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "180R"
+			(at 304.8 138.4299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 307.594 126.746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
+			(at 307.594 126.746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Thick Film Resistors - SMD, 0.125W, 0805, 1%"
+			(at 307.594 126.746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "S1 Price @ 100" "0.011"
+			(at 307.594 126.746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "S1 Part number" "603-RC0805FR-07180RL"
+			(at 307.594 126.746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "S1 Part link" "https://mou.sr/3IHQzjZ"
+			(at 307.594 126.746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "S1 Description" "Weerstanden met dikke folie - SMD 180 Ohms 125mW 0805 1%"
+			(at 307.594 126.746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "YAGEO"
+			(at 307.594 126.746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0805FR-07180RL"
+			(at 307.594 126.746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Update date" "01-03-2023"
+			(at 307.594 126.746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ff012f62-7df1-4cda-982d-5ce4090b4bc0")
+		)
+		(pin "1"
+			(uuid "7c6cd4bf-0400-4590-8444-9dafee17d32d")
+		)
+		(instances
+			(project "2026-NURDspace-PPS"
+				(path "/1b1d42dc-f63c-49d9-9b61-b09c30b6ea01"
+					(reference "R119")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 330.2 129.54 0)
 		(mirror y)
@@ -13979,6 +14181,139 @@
 			(project "2026-NURDspace-PPS"
 				(path "/1b1d42dc-f63c-49d9-9b61-b09c30b6ea01"
 					(reference "#PWR0110")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "0_NRD_Leds_and_Opto:LED_WRTH_150060AS75000")
+		(at 107.95 95.25 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4e955aed-632f-48b6-bb36-2a32b33167d2")
+		(property "Reference" "D103"
+			(at 111.76 95.5674 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "amber"
+			(at 111.76 98.1074 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
+			(at 88.9 90.424 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/150060AS75000.pdf"
+			(at 88.9 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "605nm Amber 2.0V 0603"
+			(at 89.154 92.456 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "Wurth Elektronik"
+			(at 89.408 91.694 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "150060AS75000"
+			(at 89.408 89.662 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "S1 Price @ 100" "0.115"
+			(at 89.408 87.376 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "S1 Part number" "710-150060AS75000"
+			(at 89.408 91.694 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "S1 Part link" "https://mou.sr/3Kztdzj"
+			(at 89.154 92.202 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "S1 Description" "Standaard Led's - SMD WL-SMCW Mono LED Waterclear 0603 Amber"
+			(at 89.662 90.932 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Update date" "06-03-2023"
+			(at 89.154 91.948 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a0924608-34fa-4f14-8c11-e5ac8564e39e")
+		)
+		(pin "1"
+			(uuid "11bff03c-679c-461d-83cf-bb9a65259631")
+		)
+		(instances
+			(project "2026-NURDspace-PPS"
+				(path "/1b1d42dc-f63c-49d9-9b61-b09c30b6ea01"
+					(reference "D103")
 					(unit 1)
 				)
 			)
@@ -18185,6 +18520,148 @@
 		)
 	)
 	(symbol
+		(lib_id "0_NRD_Resistors:R_0805_5K1")
+		(at 107.95 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bc1aaa25-c382-41d4-b048-00f0f718799c")
+		(property "Reference" "R120"
+			(at 110.49 86.3599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "5K1"
+			(at 110.49 88.8999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 107.442 76.708 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageogroup.com/content/datasheet/asset/file/PYU-RC_GROUP_51_ROHS_L"
+			(at 107.442 76.708 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Thick Film Resistors - SMD, 0.125W, 0805, 1%"
+			(at 107.95 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "S1 Price @ 100" "0.093"
+			(at 107.442 76.708 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "S1 Part number" "603-RC0805FR-075K1L"
+			(at 107.442 76.708 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "S1 Part link" "https://mou.sr/3sDwyHv"
+			(at 107.442 76.708 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "S1 Description" "Weerstanden met dikke folie - SMD 5.1 kOhms 125mW 0805 1%"
+			(at 107.442 76.708 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "YAGEO"
+			(at 107.442 76.708 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0805FR-075K1L"
+			(at 107.442 76.708 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Update date" "17-11-2023"
+			(at 107.442 76.708 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Makso alternative" "000394"
+			(at 107.95 77.216 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cba2ee89-88a8-4c7d-8cb3-0057884a339a")
+		)
+		(pin "2"
+			(uuid "3b6af050-f5dc-4f43-8bf1-46e7ac238726")
+		)
+		(instances
+			(project "2026-NURDspace-PPS"
+				(path "/1b1d42dc-f63c-49d9-9b61-b09c30b6ea01"
+					(reference "R120")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 58.42 134.62 0)
 		(unit 1)
@@ -19307,6 +19784,73 @@
 			(project ""
 				(path "/1b1d42dc-f63c-49d9-9b61-b09c30b6ea01"
 					(reference "TH101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 107.95 100.33 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d61d5c94-eb10-46c1-a320-5fb926778016")
+		(property "Reference" "#PWR0139"
+			(at 107.95 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 105.918 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 107.95 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 107.95 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 107.95 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d8cba412-f48f-4391-9f43-662553658214")
+		)
+		(instances
+			(project "2026-NURDspace-PPS"
+				(path "/1b1d42dc-f63c-49d9-9b61-b09c30b6ea01"
+					(reference "#PWR0139")
 					(unit 1)
 				)
 			)

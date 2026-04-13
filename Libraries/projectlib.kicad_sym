@@ -149,6 +149,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Value" "AP33772S"
@@ -158,6 +159,7 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "Interface_USBC:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm"
@@ -198,8 +200,8 @@
 		)
 		(symbol "AP33772S_1_1"
 			(rectangle
-				(start -15.24 13.97)
-				(end 10.16 -12.7)
+				(start -12.7 13.97)
+				(end 12.7 -12.7)
 				(stroke
 					(width 0)
 					(type default)
@@ -209,7 +211,7 @@
 				)
 			)
 			(pin input line
-				(at -17.78 11.43 0)
+				(at -15.24 11.43 0)
 				(length 2.54)
 				(name "ISENP"
 					(effects
@@ -227,7 +229,7 @@
 				)
 			)
 			(pin input line
-				(at -17.78 7.62 0)
+				(at -15.24 7.62 0)
 				(length 2.54)
 				(name "CC2"
 					(effects
@@ -245,7 +247,7 @@
 				)
 			)
 			(pin input line
-				(at -17.78 5.08 0)
+				(at -15.24 5.08 0)
 				(length 2.54)
 				(name "CC1"
 					(effects
@@ -263,7 +265,7 @@
 				)
 			)
 			(pin input line
-				(at -17.78 2.54 0)
+				(at -15.24 2.54 0)
 				(length 2.54)
 				(name "DP"
 					(effects
@@ -281,7 +283,7 @@
 				)
 			)
 			(pin input line
-				(at -17.78 0 0)
+				(at -15.24 0 0)
 				(length 2.54)
 				(name "DN"
 					(effects
@@ -299,7 +301,7 @@
 				)
 			)
 			(pin input line
-				(at -17.78 -5.08 0)
+				(at -15.24 -5.08 0)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -317,7 +319,7 @@
 				)
 			)
 			(pin input line
-				(at -17.78 -7.62 0)
+				(at -15.24 -7.62 0)
 				(length 2.54)
 				(name "EP"
 					(effects
@@ -335,7 +337,7 @@
 				)
 			)
 			(pin no_connect line
-				(at -17.78 -11.43 0)
+				(at -15.24 -11.43 0)
 				(length 2.54)
 				(hide yes)
 				(name "NC"
@@ -354,7 +356,7 @@
 				)
 			)
 			(pin no_connect line
-				(at -17.78 -11.43 0)
+				(at -15.24 -11.43 0)
 				(length 2.54)
 				(hide yes)
 				(name "NC"
@@ -373,7 +375,7 @@
 				)
 			)
 			(pin no_connect line
-				(at -17.78 -11.43 0)
+				(at -15.24 -11.43 0)
 				(length 2.54)
 				(hide yes)
 				(name "NC"
@@ -392,7 +394,7 @@
 				)
 			)
 			(pin no_connect line
-				(at -17.78 -11.43 0)
+				(at -15.24 -11.43 0)
 				(length 2.54)
 				(hide yes)
 				(name "NC"
@@ -411,7 +413,7 @@
 				)
 			)
 			(pin no_connect line
-				(at -17.78 -11.43 0)
+				(at -15.24 -11.43 0)
 				(length 2.54)
 				(hide yes)
 				(name "NC"
@@ -429,27 +431,8 @@
 					)
 				)
 			)
-			(pin no_connect line
-				(at -17.78 -11.43 0)
-				(length 2.54)
-				(hide yes)
-				(name "NC"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "7"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(pin input line
-				(at -7.62 -15.24 90)
+				(at -5.08 -15.24 90)
 				(length 2.54)
 				(name "FLIP"
 					(effects
@@ -467,7 +450,7 @@
 				)
 			)
 			(pin input line
-				(at -5.08 16.51 270)
+				(at -2.54 16.51 270)
 				(length 2.54)
 				(name "VCC"
 					(effects
@@ -485,7 +468,7 @@
 				)
 			)
 			(pin input line
-				(at -2.54 16.51 270)
+				(at 0 16.51 270)
 				(length 2.54)
 				(name "PWR_EN"
 					(effects
@@ -503,7 +486,7 @@
 				)
 			)
 			(pin input line
-				(at -2.54 -15.24 90)
+				(at 0 -15.24 90)
 				(length 2.54)
 				(name "LED"
 					(effects
@@ -521,7 +504,7 @@
 				)
 			)
 			(pin input line
-				(at 0 16.51 270)
+				(at 2.54 16.51 270)
 				(length 2.54)
 				(name "VOUT"
 					(effects
@@ -538,8 +521,26 @@
 					)
 				)
 			)
-			(pin input line
+			(pin output line
 				(at 2.54 -15.24 90)
+				(length 2.54)
+				(name "GPIO"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 5.08 -15.24 90)
 				(length 2.54)
 				(name "INT"
 					(effects
@@ -557,7 +558,7 @@
 				)
 			)
 			(pin input line
-				(at 12.7 11.43 180)
+				(at 15.24 11.43 180)
 				(length 2.54)
 				(name "V18"
 					(effects
@@ -575,7 +576,7 @@
 				)
 			)
 			(pin input line
-				(at 12.7 7.62 180)
+				(at 15.24 7.62 180)
 				(length 2.54)
 				(name "V5V"
 					(effects
@@ -593,7 +594,7 @@
 				)
 			)
 			(pin input line
-				(at 12.7 0 180)
+				(at 15.24 0 180)
 				(length 2.54)
 				(name "IFB"
 					(effects
@@ -611,7 +612,7 @@
 				)
 			)
 			(pin input line
-				(at 12.7 -2.54 180)
+				(at 15.24 -2.54 180)
 				(length 2.54)
 				(name "SDA"
 					(effects
@@ -629,7 +630,7 @@
 				)
 			)
 			(pin input line
-				(at 12.7 -5.08 180)
+				(at 15.24 -5.08 180)
 				(length 2.54)
 				(name "SCL"
 					(effects
@@ -647,7 +648,7 @@
 				)
 			)
 			(pin input line
-				(at 12.7 -7.62 180)
+				(at 15.24 -7.62 180)
 				(length 2.54)
 				(name "OTP"
 					(effects

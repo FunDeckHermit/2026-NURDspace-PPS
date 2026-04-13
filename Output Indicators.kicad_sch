@@ -475,7 +475,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "0_NRD_Connectors:CON_JST_BM05B-GHS-TBT"
+		(symbol "0_NRD_Connectors:CON_JST_BM06B-GHS-TBT"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -492,7 +492,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "BM05B"
+			(property "Value" "BM06B"
 				(at 4.318 1.016 0)
 				(effects
 					(font
@@ -501,7 +501,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "0_NRD_footprints:J_BM05B-GHS-TBT"
+			(property "Footprint" "0_NRD_footprints:J_BM06B-GHS-TBT"
 				(at 1.524 33.02 0)
 				(effects
 					(font
@@ -519,7 +519,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Connector Header Surface Mount 5 position 0.049\" (1.25mm)"
+			(property "Description" "Connector Header Surface Mount 6 position 0.049\" (1.25mm)"
 				(at 5.588 32.766 0)
 				(effects
 					(font
@@ -528,7 +528,7 @@
 					(hide yes)
 				)
 			)
-			(property "S1 Price @ 100" "0.242"
+			(property "S1 Price @ 100" "0.288"
 				(at -0.508 32.766 0)
 				(effects
 					(font
@@ -537,7 +537,7 @@
 					(hide yes)
 				)
 			)
-			(property "S1 Description" "Connector Header Surface Mount 5 position 0.049\" (1.25mm)"
+			(property "S1 Description" "Connector Header Surface Mount 6 position 0.049\" (1.25mm)"
 				(at 6.604 33.02 0)
 				(effects
 					(font
@@ -546,7 +546,7 @@
 					(hide yes)
 				)
 			)
-			(property "S1 Part number" "306-BM05BGHSTBTLFSN"
+			(property "S1 Part number" "306-BM06BGHSTBTLFSN"
 				(at 6.604 33.02 0)
 				(effects
 					(font
@@ -555,7 +555,7 @@
 					(hide yes)
 				)
 			)
-			(property "S1 Part link" "https://mou.sr/4rhQYiT"
+			(property "S1 Part link" "https://mou.sr/43ABJaA"
 				(at 6.604 33.02 0)
 				(effects
 					(font
@@ -564,7 +564,7 @@
 					(hide yes)
 				)
 			)
-			(property "MPN" "BM05B-GHS-TBT(LF)(SN) "
+			(property "MPN" "BM06B-GHS-TBT(LF)(SN) "
 				(at 2.794 32.258 0)
 				(effects
 					(font
@@ -600,10 +600,10 @@
 					(hide yes)
 				)
 			)
-			(symbol "CON_JST_BM05B-GHS-TBT_1_1"
+			(symbol "CON_JST_BM06B-GHS-TBT_1_1"
 				(rectangle
-					(start -1.27 6.35)
-					(end 1.27 -6.35)
+					(start -1.27 7.62)
+					(end 1.27 -7.62)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -613,8 +613,8 @@
 					)
 				)
 				(rectangle
-					(start -1.27 5.207)
-					(end 0 4.953)
+					(start -1.27 6.477)
+					(end 0 6.223)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -624,8 +624,8 @@
 					)
 				)
 				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
+					(start -1.27 3.937)
+					(end 0 3.683)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -635,8 +635,8 @@
 					)
 				)
 				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
+					(start -1.27 1.397)
+					(end 0 1.143)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -646,8 +646,8 @@
 					)
 				)
 				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
+					(start -1.27 -1.143)
+					(end 0 -1.397)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -657,8 +657,19 @@
 					)
 				)
 				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
+					(start -1.27 -3.683)
+					(end 0 -3.937)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -6.223)
+					(end 0 -6.477)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -669,7 +680,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.016 -7.112) (xy 1.016 -7.112)
+						(xy -1.016 -8.382) (xy 1.016 -8.382)
 					)
 					(stroke
 						(width 0.1524)
@@ -680,7 +691,7 @@
 					)
 				)
 				(text "Mounting"
-					(at 0 -6.731 0)
+					(at 0 -8.001 0)
 					(effects
 						(font
 							(size 0.381 0.381)
@@ -688,7 +699,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 5.08 0)
+					(at -5.08 6.35 0)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -706,7 +717,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at -5.08 3.81 0)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -724,7 +735,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at -5.08 1.27 0)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -742,7 +753,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -2.54 0)
+					(at -5.08 -1.27 0)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -760,7 +771,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -5.08 0)
+					(at -5.08 -3.81 0)
 					(length 3.81)
 					(name "Pin_5"
 						(effects
@@ -778,7 +789,25 @@
 					)
 				)
 				(pin passive line
-					(at 0 -10.16 90)
+					(at -5.08 -6.35 0)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -11.43 90)
 					(length 3.048)
 					(name "MountPin"
 						(effects
@@ -796,10 +825,10 @@
 					)
 				)
 			)
-			(symbol "CON_JST_BM05B-GHS-TBT_1_2"
+			(symbol "CON_JST_BM06B-GHS-TBT_1_2"
 				(rectangle
-					(start -1.27 6.35)
-					(end 1.27 -6.35)
+					(start -1.27 7.62)
+					(end 1.27 -7.62)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -809,8 +838,8 @@
 					)
 				)
 				(rectangle
-					(start -1.27 5.207)
-					(end 0 4.953)
+					(start -1.27 6.477)
+					(end 0 6.223)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -820,8 +849,8 @@
 					)
 				)
 				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
+					(start -1.27 3.937)
+					(end 0 3.683)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -831,8 +860,8 @@
 					)
 				)
 				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
+					(start -1.27 1.397)
+					(end 0 1.143)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -842,8 +871,8 @@
 					)
 				)
 				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
+					(start -1.27 -1.143)
+					(end 0 -1.397)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -853,8 +882,19 @@
 					)
 				)
 				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
+					(start -1.27 -3.683)
+					(end 0 -3.937)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -6.223)
+					(end 0 -6.477)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -865,7 +905,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.016 -7.112) (xy 1.016 -7.112)
+						(xy -1.016 -8.382) (xy 1.016 -8.382)
 					)
 					(stroke
 						(width 0.1524)
@@ -876,7 +916,7 @@
 					)
 				)
 				(text "Mounting"
-					(at 0 -6.731 0)
+					(at 0 -8.001 0)
 					(effects
 						(font
 							(size 0.381 0.381)
@@ -884,7 +924,25 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 5.08 0)
+					(at -5.08 6.35 0)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 3.81 0)
 					(length 3.81)
 					(name "Pin_5"
 						(effects
@@ -902,7 +960,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at -5.08 1.27 0)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -920,7 +978,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at -5.08 -1.27 0)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -938,7 +996,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -2.54 0)
+					(at -5.08 -3.81 0)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -956,7 +1014,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -5.08 0)
+					(at -5.08 -6.35 0)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -974,7 +1032,7 @@
 					)
 				)
 				(pin passive line
-					(at 0 -10.16 90)
+					(at 0 -11.43 90)
 					(length 3.048)
 					(name "MountPin"
 						(effects
@@ -2534,6 +2592,131 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:VBUS"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "VBUS"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"VBUS\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "VBUS_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "VBUS_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "Decimal indicator"
 		(exclude_from_sim no)
@@ -3081,7 +3264,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.61 121.92) (xy 309.88 121.92)
+			(xy 306.07 121.92) (xy 309.88 121.92)
 		)
 		(stroke
 			(width 0)
@@ -4491,7 +4674,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.61 120.65) (xy 308.61 121.92)
+			(xy 306.07 120.65) (xy 306.07 121.92)
 		)
 		(stroke
 			(width 0)
@@ -11594,6 +11777,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:VBUS")
+		(at 309.88 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "42931ffc-3b96-46b9-9bfa-6a373934ea2e")
+		(property "Reference" "#PWR0275"
+			(at 309.88 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VBUS"
+			(at 309.88 115.316 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 309.88 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 309.88 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VBUS\""
+			(at 309.88 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aca18d94-fd50-4824-8902-8bf10fc2ffc4")
+		)
+		(instances
+			(project "2026-NURDspace-PPS"
+				(path "/1b1d42dc-f63c-49d9-9b61-b09c30b6ea01/e958a2e9-b753-4874-981c-670674a7fa9b"
+					(reference "#PWR0275")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "00_projectlib:LED_LUML_MXA8-PW40-0000")
 		(at 190.5 194.31 90)
 		(unit 1)
@@ -15333,8 +15581,8 @@
 		)
 	)
 	(symbol
-		(lib_id "0_NRD_Connectors:CON_JST_BM05B-GHS-TBT")
-		(at 314.96 127 0)
+		(lib_id "0_NRD_Connectors:CON_JST_BM06B-GHS-TBT")
+		(at 314.96 125.73 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15343,7 +15591,7 @@
 		(fields_autoplaced yes)
 		(uuid "7f0dc2ed-b63d-4b62-94c6-d21154cd4435")
 		(property "Reference" "J201"
-			(at 317.5 126.0855 0)
+			(at 317.5 124.8155 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15351,8 +15599,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BM05B"
-			(at 317.5 128.6255 0)
+		(property "Value" "BM06B"
+			(at 317.5 127.3555 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15360,8 +15608,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "0_NRD_footprints:J_BM05B-GHS-TBT"
-			(at 316.484 93.98 0)
+		(property "Footprint" "0_NRD_footprints:J_BM06B-GHS-TBT"
+			(at 316.484 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15370,7 +15618,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eGH.pdf"
-			(at 321.564 93.98 0)
+			(at 321.564 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15378,8 +15626,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Connector Header Surface Mount 5 position 0.049\" (1.25mm)"
-			(at 320.548 94.234 0)
+		(property "Description" "Connector Header Surface Mount 6 position 0.049\" (1.25mm)"
+			(at 320.548 92.964 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15387,8 +15635,8 @@
 				(hide yes)
 			)
 		)
-		(property "S1 Price @ 100" "0.242"
-			(at 314.452 94.234 0)
+		(property "S1 Price @ 100" "0.288"
+			(at 314.452 92.964 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15396,8 +15644,8 @@
 				(hide yes)
 			)
 		)
-		(property "S1 Description" "Connector Header Surface Mount 5 position 0.049\" (1.25mm)"
-			(at 321.564 93.98 0)
+		(property "S1 Description" "Connector Header Surface Mount 6 position 0.049\" (1.25mm)"
+			(at 321.564 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15405,8 +15653,8 @@
 				(hide yes)
 			)
 		)
-		(property "S1 Part number" "306-BM05BGHSTBTLFSN"
-			(at 321.564 93.98 0)
+		(property "S1 Part number" "306-BM06BGHSTBTLFSN"
+			(at 321.564 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15414,8 +15662,8 @@
 				(hide yes)
 			)
 		)
-		(property "S1 Part link" "https://mou.sr/4rhQYiT"
-			(at 321.564 93.98 0)
+		(property "S1 Part link" "https://mou.sr/43ABJaA"
+			(at 321.564 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15423,8 +15671,8 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "BM05B-GHS-TBT(LF)(SN) "
-			(at 317.754 94.742 0)
+		(property "MPN" "BM06B-GHS-TBT(LF)(SN) "
+			(at 317.754 93.472 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15433,7 +15681,7 @@
 			)
 		)
 		(property "MF" "JST"
-			(at 316.23 38.1 0)
+			(at 316.23 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15458,6 +15706,9 @@
 		)
 		(pin "MP"
 			(uuid "c06b05b9-b879-45d2-a1f2-b24305a17029")
+		)
+		(pin "6"
+			(uuid "d598239f-b1e6-404b-a8e8-0abc1662ed6a")
 		)
 		(instances
 			(project ""
@@ -20722,7 +20973,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 308.61 120.65 0)
+		(at 306.07 120.65 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -20730,7 +20981,7 @@
 		(dnp no)
 		(uuid "ddba64c9-e641-4b85-a72c-a04d66fa6298")
 		(property "Reference" "#PWR0272"
-			(at 308.61 124.46 0)
+			(at 306.07 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20739,7 +20990,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 308.61 116.586 0)
+			(at 306.07 116.586 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20747,7 +20998,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 308.61 120.65 0)
+			(at 306.07 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20756,7 +21007,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 308.61 120.65 0)
+			(at 306.07 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20765,7 +21016,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 308.61 120.65 0)
+			(at 306.07 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)

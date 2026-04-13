@@ -2,8 +2,9 @@ KiCad Export Report
 ===================
 
 Project: 2026-NURDspace-PPS
-Run at: 2026-04-06 22:09:57
-Duration: 27s
+Run at: 2026-04-13 21:21:14
+Duration: 28s
+KiCad Type: Flatpak
 
 Render settings:
   Quality: high
@@ -22,6 +23,13 @@ Placement:
   Units: mm
   Side: both
 
+Interactive BOM:
+  Fields: Value, Footprint, MF, MPN
+  Grouped by: Value, Footprint
+  DNP filtering: Enabled (kicad_dnp field)
+  Layout: left-right
+  Layer view: Front
+
 Generated files:
 2026-NURDspace-PPS_board.step
 2026-NURDspace-PPS_bom.csv
@@ -32,4 +40,6 @@ Generated files:
 2026-NURDspace-PPS_render-iso.png
 2026-NURDspace-PPS_render-top.png
 2026-NURDspace-PPS_schematic.pdf
+build.log
 drill
+ibom.html

@@ -1,0 +1,520 @@
+Detected gerber layers: F.Cu,In1.Cu,In2.Cu,B.Cu,F.Mask,B.Mask,F.Paste,B.Paste,F.SilkS,B.SilkS,Edge.Cuts
+→ Exporting schematic PDF
+Plotted to 'kicad-artifacts/2026-NURDspace-PPS_schematic.pdf'.
+Done.
+→ Exporting PCB PDF
+Plotted to 'kicad-artifacts/pcb-multipage/2026-NURDspace-PPS.pdf'.
+Done.
+→ Exporting top render
+Loading…
+Build board outline
+
+Create layers
+Create tracks and vias
+Create zones
+Build Tech layers
+Build Tech layer 11
+Build Tech layer 9
+Build Tech layer 15
+Build Tech layer 13
+Build Tech layer 7
+Build Tech layer 5
+Build Tech layer 3
+Build Tech layer 1
+Build Tech layer 17
+Build Tech layer 19
+Build Tech layer 21
+Build Tech layer 23
+Build Tech layer 39
+Build Tech layer 41
+Build Tech layer 43
+Build Tech layer 45
+Build Tech layer 47
+Build Tech layer 49
+Build Tech layer 51
+Build Tech layer 53
+Build Tech layer 55
+Build Tech layer 57
+Build Tech layer 59
+Build Tech layer 61
+Build Tech layer 63
+Build Tech layer 65
+Build Tech layer 67
+Build Tech layer 69
+Build Tech layer 71
+Build Tech layer 73
+Build Tech layer 75
+Build Tech layer 77
+Build Tech layer 79
+Build Tech layer 81
+Build Tech layer 83
+Build Tech layer 85
+Build Tech layer 87
+Build Tech layer 89
+Build Tech layer 91
+Build Tech layer 93
+Build Tech layer 95
+Build Tech layer 97
+Build Tech layer 99
+Build Tech layer 101
+Build Tech layer 103
+Build Tech layer 105
+Build Tech layer 107
+Build Tech layer 109
+Build Tech layer 111
+Build Tech layer 113
+Build Tech layer 115
+Build Tech layer 117
+Build Tech layer 119
+Build Tech layer 121
+Build Tech layer 123
+Build Tech layer 125
+Build Tech layer 127
+Simplifying copper layer polygons
+Simplify holes contours
+Build BVH for holes and vias
+Load Raytracing: board
+Load Raytracing: layers
+Loading 3D models...
+Reload time 0.377 s
+Rendering: 7 %
+Rendering: 12 %
+Rendering: 18 %
+Rendering: 23 %
+Rendering: 32 %
+Rendering: 39 %
+Rendering: 46 %
+Rendering: 51 %
+Rendering: 58 %
+Rendering: 66 %
+Rendering: 77 %
+Rendering: 84 %
+Rendering: 91 %
+Rendering: 97 %
+Rendering: 100 %
+Rendering: Post processing shader
+Rendering time 6.044 s
+Successfully created 3D render image
+→ Exporting bottom render
+Loading…
+Build board outline
+
+Create layers
+Create tracks and vias
+Create zones
+Build Tech layers
+Build Tech layer 11
+Build Tech layer 9
+Build Tech layer 15
+Build Tech layer 13
+Build Tech layer 7
+Build Tech layer 5
+Build Tech layer 3
+Build Tech layer 1
+Build Tech layer 17
+Build Tech layer 19
+Build Tech layer 21
+Build Tech layer 23
+Build Tech layer 39
+Build Tech layer 41
+Build Tech layer 43
+Build Tech layer 45
+Build Tech layer 47
+Build Tech layer 49
+Build Tech layer 51
+Build Tech layer 53
+Build Tech layer 55
+Build Tech layer 57
+Build Tech layer 59
+Build Tech layer 61
+Build Tech layer 63
+Build Tech layer 65
+Build Tech layer 67
+Build Tech layer 69
+Build Tech layer 71
+Build Tech layer 73
+Build Tech layer 75
+Build Tech layer 77
+Build Tech layer 79
+Build Tech layer 81
+Build Tech layer 83
+Build Tech layer 85
+Build Tech layer 87
+Build Tech layer 89
+Build Tech layer 91
+Build Tech layer 93
+Build Tech layer 95
+Build Tech layer 97
+Build Tech layer 99
+Build Tech layer 101
+Build Tech layer 103
+Build Tech layer 105
+Build Tech layer 107
+Build Tech layer 109
+Build Tech layer 111
+Build Tech layer 113
+Build Tech layer 115
+Build Tech layer 117
+Build Tech layer 119
+Build Tech layer 121
+Build Tech layer 123
+Build Tech layer 125
+Build Tech layer 127
+Simplifying copper layer polygons
+Simplify holes contours
+Build BVH for holes and vias
+Load Raytracing: board
+Load Raytracing: layers
+Loading 3D models...
+Reload time 0.397 s
+Rendering: 8 %
+Rendering: 16 %
+Rendering: 23 %
+Rendering: 30 %
+Rendering: 36 %
+Rendering: 43 %
+Rendering: 50 %
+Rendering: 59 %
+Rendering: 69 %
+Rendering: 77 %
+Rendering: 85 %
+Rendering: 92 %
+Rendering: 100 %
+Rendering: 100 %
+Rendering: Post processing shader
+Rendering time 5.491 s
+Successfully created 3D render image
+→ Exporting isometric render
+Loading…
+Build board outline
+
+Create layers
+Create tracks and vias
+Create zones
+Build Tech layers
+Build Tech layer 11
+Build Tech layer 9
+Build Tech layer 15
+Build Tech layer 13
+Build Tech layer 7
+Build Tech layer 5
+Build Tech layer 3
+Build Tech layer 1
+Build Tech layer 17
+Build Tech layer 19
+Build Tech layer 21
+Build Tech layer 23
+Build Tech layer 39
+Build Tech layer 41
+Build Tech layer 43
+Build Tech layer 45
+Build Tech layer 47
+Build Tech layer 49
+Build Tech layer 51
+Build Tech layer 53
+Build Tech layer 55
+Build Tech layer 57
+Build Tech layer 59
+Build Tech layer 61
+Build Tech layer 63
+Build Tech layer 65
+Build Tech layer 67
+Build Tech layer 69
+Build Tech layer 71
+Build Tech layer 73
+Build Tech layer 75
+Build Tech layer 77
+Build Tech layer 79
+Build Tech layer 81
+Build Tech layer 83
+Build Tech layer 85
+Build Tech layer 87
+Build Tech layer 89
+Build Tech layer 91
+Build Tech layer 93
+Build Tech layer 95
+Build Tech layer 97
+Build Tech layer 99
+Build Tech layer 101
+Build Tech layer 103
+Build Tech layer 105
+Build Tech layer 107
+Build Tech layer 109
+Build Tech layer 111
+Build Tech layer 113
+Build Tech layer 115
+Build Tech layer 117
+Build Tech layer 119
+Build Tech layer 121
+Build Tech layer 123
+Build Tech layer 125
+Build Tech layer 127
+Simplifying copper layer polygons
+Simplify holes contours
+Build BVH for holes and vias
+Load Raytracing: board
+Load Raytracing: layers
+Loading 3D models...
+Reload time 0.384 s
+Rendering: 6 %
+Rendering: 11 %
+Rendering: 15 %
+Rendering: 20 %
+Rendering: 26 %
+Rendering: 33 %
+Rendering: 41 %
+Rendering: 50 %
+Rendering: 60 %
+Rendering: 71 %
+Rendering: 82 %
+Rendering: 88 %
+Rendering: 93 %
+Rendering: 98 %
+Rendering: 100 %
+Rendering: Post processing shader
+Rendering time 6.006 s
+Successfully created 3D render image
+→ Exporting drill files
+Created file 'kicad-artifacts/drill/2026-NURDspace-PPS.drl'
+Created file 'kicad-artifacts/drill/2026-NURDspace-PPS-drl_map.pdf'.
+Done.
+→ Exporting STEP model
+Determining PCB data.
+Build STEP data.
+Adding component D101.
+Adding component R218.
+Adding component R105.
+Adding component R208.
+Adding component D216.
+Adding component D222.
+Adding component Q105.
+Adding component C112.
+Adding component R104.
+Adding component D201.
+Adding component D226.
+Adding component R202.
+Adding component D207.
+Adding component U208.
+Adding component D224.
+Adding component C101.
+Adding component D102.
+Adding component D215.
+Adding component U204.
+Adding component D204.
+Adding component R207.
+Adding component R110.
+Adding component Q103.
+Adding component U202.
+Adding component U212.
+Adding component R111.
+Adding component C110.
+Adding component D212.
+Adding component U205.
+Adding component R209.
+Adding component R103.
+Adding component U104.
+Adding component R107.
+Adding component L101.
+Adding component C113.
+Adding component R112.
+Adding component R211.
+Adding component C105.
+Adding component U211.
+Adding component R114.
+Adding component R214.
+Adding component D221.
+Adding component U207.
+Adding component C115.
+Adding component D213.
+Adding component R228.
+Adding component R116.
+Adding component D218.
+Adding component C106.
+Adding component Q102.
+Adding component U206.
+Adding component R221.
+Adding component D103.
+Adding component R120.
+Adding component R206.
+Adding component D202.
+Adding component U203.
+Adding component R215.
+Adding component C111.
+Adding component R119.
+Adding component TH101.
+Adding component U216.
+Adding component D225.
+Adding component R117.
+Adding component R210.
+Adding component R113.
+Adding component R222.
+Adding component U210.
+Adding component D219.
+Adding component D214.
+Adding component D208.
+Adding component U214.
+Adding component R205.
+Adding component U209.
+Adding component U201.
+Adding component Q101.
+Adding component R212.
+Adding component D220.
+Adding component R213.
+Adding component R201.
+Adding component R106.
+Adding component C202.
+Adding component R203.
+Adding component U101.
+Adding component R225.
+Adding component U213.
+Adding component D210.
+Adding component D206.
+Adding component D209.
+Adding component R118.
+Adding component R204.
+Adding component C204.
+Adding component U217.
+Adding component D217.
+Adding component U218.
+Adding component D223.
+Adding component R224.
+Adding component C108.
+Adding component R115.
+Adding component R219.
+Adding component U103.
+Adding component U222.
+Adding component D203.
+Adding component R108.
+Adding component R102.
+Adding component U220.
+Adding component D228.
+Adding component U215.
+Adding component C201.
+Adding component R223.
+Adding component R101.
+Adding component D205.
+Adding component C107.
+Adding component C102.
+Adding component R220.
+Adding component D211.
+Adding component J201.
+Adding component R227.
+Adding component R216.
+Adding component U221.
+Adding component C114.
+Adding component C109.
+Adding component D227.
+Adding component R226.
+Adding component C203.
+Adding component J101.
+Adding component Q106.
+Adding component Q104.
+Adding component C103.
+Adding component U102.
+Adding component SW101.
+*** ERR StepReaderData : Unresolved Reference : Fails Count : 1 ***
+Adding component U219.
+Adding component R217.
+Adding component R109.
+Adding component C104.
+Create PCB solid model.
+Board outline: found 175 initial points.
+Build board outlines (1 outlines) with 175 points.
+Build board cutouts and holes (372 hole(s)).
+Subtracting holes for shapes
+Subtracting holes for pads
+Subtracting holes for vias
+Generate board full shape.
+Writing STEP file.
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : $tempfile$.step(191231 ents)  Write  Done
+STEP file 'kicad-artifacts/2026-NURDspace-PPS_board.step' created.
+
+Export time 2.897 s
+→ Exporting placement CSV
+Wrote position data to 'kicad-artifacts/2026-NURDspace-PPS_placement.csv'.
+→ Exporting BOM CSV
+Wrote bill of materials to 'kicad-artifacts/2026-NURDspace-PPS_bom.csv'.
+→ Generating Interactive HTML BOM
+→ Running InteractiveHtmlBom generate_interactive_bom...
+21:21:40: Debug: Adding duplicate image handler for 'PNG file'
+21:21:40: Debug: Adding duplicate image handler for 'PNG file'
+21:21:40: Debug: Adding duplicate image handler for 'JPEG file'
+21:21:40: Debug: Adding duplicate image handler for 'TIFF file'
+21:21:40: Debug: Adding duplicate image handler for 'GIF file'
+21:21:40: Debug: Adding duplicate image handler for 'PNM file'
+21:21:40: Debug: Adding duplicate image handler for 'PCX file'
+21:21:40: Debug: Adding duplicate image handler for 'IFF file'
+21:21:40: Debug: Adding duplicate image handler for 'Windows icon file'
+21:21:40: Debug: Adding duplicate image handler for 'Windows cursor file'
+21:21:40: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+21:21:40: Debug: Adding duplicate image handler for 'TGA file'
+21:21:40: Debug: Adding duplicate image handler for 'XPM file'
+21:21:40: Debug: Adding duplicate image handler for 'JPEG file'
+21:21:40: Debug: Adding duplicate image handler for 'TIFF file'
+21:21:40: Debug: Adding duplicate image handler for 'GIF file'
+21:21:40: Debug: Adding duplicate image handler for 'PNM file'
+21:21:40: Debug: Adding duplicate image handler for 'PCX file'
+21:21:40: Debug: Adding duplicate image handler for 'IFF file'
+21:21:40: Debug: Adding duplicate image handler for 'Windows icon file'
+21:21:40: Debug: Adding duplicate image handler for 'Windows cursor file'
+21:21:40: Debug: Adding duplicate image handler for 'Windows animated cursor file'
+21:21:40: Debug: Adding duplicate image handler for 'TGA file'
+21:21:40: Debug: Adding duplicate image handler for 'XPM file'
+Loading ./2026-NURDspace-PPS.kicad_pcb
+2026-04-13 21:21:40,884 WARNING Assuming extra data file to be the pcb file since --extra-data-file was not specified.
+Loading ./2026-NURDspace-PPS.kicad_pcb
+2026-04-13 21:21:40,884 WARNING Assuming extra data file to be the pcb file since --extra-data-file was not specified.
+2026-04-13 21:21:41,113 INFO Compressing pcb data
+2026-04-13 21:21:41,113 INFO Compressing pcb data
+2026-04-13 21:21:41,688 INFO Dumping pcb data
+2026-04-13 21:21:41,688 INFO Dumping pcb data
+2026-04-13 21:21:41,690 INFO Created file /home/roy/Documents/_Obsessies/2026-NURDspace-PPS/kicad-artifacts/ibom.html
+2026-04-13 21:21:41,690 INFO Created file /home/roy/Documents/_Obsessies/2026-NURDspace-PPS/kicad-artifacts/ibom.html
+✓ Interactive BOM generated successfully
+→ Exporting Gerbers
+Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-F_Cu.gtl'.
+Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-In1_Cu.g1'.
+Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-In2_Cu.g2'.
+Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-B_Cu.gbl'.
+Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-F_Paste.gtp'.
+Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-B_Paste.gbp'.
+Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-F_Silkscreen.gto'.
+Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-B_Silkscreen.gbo'.
+Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-F_Mask.gts'.
+Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-B_Mask.gbs'.
+Plotted to 'kicad-artifacts/gerbers/2026-NURDspace-PPS-Edge_Cuts.gm1'.
+→ Exporting Drill Files (JLCPCB-compatible Excellon)
+Created file 'kicad-artifacts/gerbers/2026-NURDspace-PPS.drl'
+Done.
+→ Removing Gerber Job file (if present)
+→ Zipping Gerbers and Drill Files
+→ Writing report.txt
+
+✓ All artifacts generated in: kicad-artifacts
+✓ Build log: kicad-artifacts/build.log
+kicad-artifacts:
+2026-NURDspace-PPS_board.step
+2026-NURDspace-PPS_bom.csv
+2026-NURDspace-PPS_gerbers.zip
+2026-NURDspace-PPS_pcb.pdf
+2026-NURDspace-PPS_placement.csv
+2026-NURDspace-PPS_render-bottom.png
+2026-NURDspace-PPS_render-iso.png
+2026-NURDspace-PPS_render-top.png
+2026-NURDspace-PPS_schematic.pdf
+build.log
+drill
+ibom.html
+report.txt
+
+kicad-artifacts/drill:
+2026-NURDspace-PPS_drill-map.pdf
+2026-NURDspace-PPS.drl
